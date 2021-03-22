@@ -1,7 +1,12 @@
 <script>
 	import Navbar from './Navbar.svelte';
-	import Title from './Title.svelte';
+	import Expenses from './ExpenseList.svelte';
+	import expensesData from './expenses';
+
+	let expenses = [...expensesData];
 </script>
 
 <Navbar />
-<Title />
+<main class="content">
+	<Expenses {expenses} />
+</main>
